@@ -8,3 +8,6 @@ class Moto(Veiculo):
     def __str__(self) -> str:
         info_pai =  super().__str__()
         return f'{info_pai} | {self.tipo}'
+    
+    def ligar(self):
+        self._ligado= not self._ligado

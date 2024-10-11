@@ -1,4 +1,6 @@
-class Veiculo:
+from abc import ABC, abstractstaticmethod
+
+class Veiculo(ABC):
     veiculos = []
     
     def __init__(self, marca, modelo) -> None:
@@ -19,6 +21,10 @@ class Veiculo:
         print(f'{'Marca'.ljust(25)} | {'Modelo'.ljust(25)}')
         for veiculo in Veiculo.veiculos:
             print(f'{veiculo.marca.ljust(25)} | {veiculo.modelo.ljust(25)}')
+    
+    @abstractstaticmethod
+    def ligar(self):
+        pass
     
 
 if __name__ == '__main__':

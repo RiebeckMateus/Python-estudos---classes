@@ -5,6 +5,9 @@ class ItemCardapio(ABC):
         self._nome = nome
         self._preco = preco
     
+    def __str__(self) -> str:
+        return f'{self._nome} | {self._preco}'
+    
     @abstractclassmethod
-    def aplicar_desconto(self):
+    def aplicar_desconto(self, desconto):
         pass
